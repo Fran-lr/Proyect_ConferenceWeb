@@ -1,0 +1,33 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#labelPrincipal{
+    -fx-background-color:#1a5276;
+    -fx-text-fill: white;
+    -fx-border-color:black;   
+}
+
+#labelPrincipalAdmin{
+    -fx-background-color:#1a5276;
+    -fx-text-fill: white;
+    -fx-border-color:black;
+}
+#labelPinciplaSalas{
+	-fx-background-color:#1a5276;
+    -fx-text-fill: white;
+    -fx-border-color:black;
+	
+}
+#labelPrincipalCiudad{
+	-fx-background-color:#1a5276;
+    -fx-text-fill: white;
+    -fx-border-color:black;
+}
+#labelPrincipalClientes{
+	-fx-background-color:#1a5276;
+    -fx-text-fill: white;
+    -fx-border-color:black;
+}
+#labelPrincipalOrden{
+	-fx-background-color:#1a5276;
+    -fx-text-fill: white;
+    -fx-border-color:black;
+}

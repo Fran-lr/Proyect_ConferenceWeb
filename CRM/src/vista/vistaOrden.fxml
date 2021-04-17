@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="951.0" prefWidth="1294.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="labelPrincipalOrden" alignment="CENTER" layoutY="-2.0" prefHeight="72.0" prefWidth="1294.0" text="Administracion de Ordenes">
+         <font>
+            <Font name="Calibri Bold" size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAnadir" layoutX="250.0" layoutY="543.0" mnemonicParsing="false" onAction="#anadir" prefHeight="49.0" prefWidth="89.0" text="Añadir" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="246.0" layoutY="631.0" mnemonicParsing="false" onAction="#editar" prefHeight="49.0" prefWidth="97.0" text="Editar" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBorrar" layoutX="250.0" layoutY="728.0" mnemonicParsing="false" onAction="#borrar" prefHeight="49.0" prefWidth="89.0" text="Borrar" textFill="#d33838">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="83.0" layoutY="822.0" mnemonicParsing="false" onAction="#volver" prefHeight="49.0" prefWidth="89.0" text="Volver" textFill="#f59622">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tablaOrdenSalas" layoutX="53.0" layoutY="133.0" onMouseClicked="#SelectTablaOrdenSalas" prefHeight="344.0" prefWidth="554.0">
+        <columns>
+          <TableColumn fx:id="colOrdenNsala" prefWidth="110.0" text="Nº Sala" />
+          <TableColumn fx:id="colOrdenPlanta" prefWidth="110.0" text="Planta" />
+            <TableColumn fx:id="colOrdenPuerta" prefWidth="110.0" text="Puerta" />
+            <TableColumn fx:id="colOrdenNAsistentes" prefWidth="110.0" text="Nº Asistentes" />
+            <TableColumn fx:id="colOrdenCiudad" prefWidth="110.0" text="Ciudad" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tablaOrdenCliente" layoutX="670.0" layoutY="133.0" onMouseClicked="#SelectTablaOrdenCliente" prefHeight="344.0" prefWidth="575.0">
+        <columns>
+          <TableColumn fx:id="colOrdenIdCliente" prefWidth="190.0" text="ID Cliente" />
+          <TableColumn fx:id="colOrdenCliente" minWidth="0.0" prefWidth="190.0" text="Cliente" />
+            <TableColumn fx:id="colOrdenNif" prefWidth="190.0" text="NIF" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tablaOrdenes" layoutX="670.0" layoutY="536.0" onMouseClicked="#selectTablaOrden" prefHeight="344.0" prefWidth="575.0">
+        <columns>
+          <TableColumn fx:id="colIdOrden" prefWidth="142.0" text="ID Orden" />
+          <TableColumn fx:id="collOrdenCliente" minWidth="0.0" prefWidth="142.0" text="ID Cliente" />
+            <TableColumn fx:id="collOrdenSala" prefWidth="142.0" text="ID Sala" />
+            <TableColumn fx:id="colOrdenPrecio" prefWidth="142.0" text="Precio" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f59622" height="36.0" layoutX="3.0" layoutY="915.0" stroke="BLACK" strokeType="INSIDE" width="1288.0" />
+      <Label fx:id="labelOrdenSalas" alignment="CENTER" layoutX="209.0" layoutY="100.0" prefHeight="22.0" prefWidth="268.0" text="Listado de  Salas">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelOdenCliente" alignment="CENTER" layoutX="824.0" layoutY="100.0" prefHeight="22.0" prefWidth="268.0" text="Listado de  Clientes">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="400.0" layoutY="623.0" text="ID Cliente">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="409.0" layoutY="682.0" onKeyTyped="#ketIdSala" text="ID Sala">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="744.0" onKeyTyped="#keyPrecio" text="Precio">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spIdOrden" layoutX="473.0" layoutY="555.0" onKeyTyped="#keyIdOrden" prefHeight="25.0" prefWidth="134.0" />
+      <Spinner fx:id="spIdCliente" layoutX="473.0" layoutY="619.0" onKeyTyped="#keyIdCliente" prefHeight="25.0" prefWidth="134.0" />
+      <Spinner fx:id="spIdSala" layoutX="473.0" layoutY="678.0" onKeyTyped="#keyIdCliente" prefHeight="25.0" prefWidth="134.0" />
+      <Button fx:id="btnImprimir" layoutX="250.0" layoutY="822.0" mnemonicParsing="false" onAction="#imprimir" prefHeight="49.0" prefWidth="89.0" text="Imprimir" textFill="#ff06ea">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelOrdenes" alignment="CENTER" layoutX="824.0" layoutY="499.0" prefHeight="22.0" prefWidth="268.0" text="Listado de  Ordenes">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelInfo" alignment="CENTER" layoutX="408.0" layoutY="833.0" prefHeight="22.0" prefWidth="201.0" text="Info" textFill="#0b1294">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="158.0" fitWidth="148.0" layoutX="53.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/img_factura.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="textFieldIdOrden" layoutX="402.0" layoutY="559.0" text="ID Orden">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldPrecio" layoutX="477.0" layoutY="740.0" onKeyTyped="#keyPrecio" prefHeight="25.0" prefWidth="134.0" />
+   </children>
+</AnchorPane>

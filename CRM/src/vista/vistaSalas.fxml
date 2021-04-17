@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="736.0" prefWidth="919.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="labelPinciplaSalas" alignment="CENTER" prefHeight="90.0" prefWidth="919.0" text="Inventario de Salas">
+         <font>
+            <Font name="Calibri Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNSalas" layoutX="32.0" layoutY="206.0" text="Nº Sala">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPlanta" layoutX="35.0" layoutY="264.0" text="Planta">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFieldPlanta" layoutX="104.0" layoutY="260.0" onKeyTyped="#KeyPlanta" />
+      <Label fx:id="labelPuerta" layoutX="41.0" layoutY="316.0" text="Puerta">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFieldPuerta" layoutX="104.0" layoutY="312.0" onKeyTyped="#KeyPuerta" />
+      <Label fx:id="labelNasistentes" layoutX="23.0" layoutY="381.0" text="Nº Aistentes">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbCiudad" layoutX="105.0" layoutY="440.0" prefWidth="150.0" />
+      <Label fx:id="labelNCiudad" layoutX="40.0" layoutY="444.0" text="Ciudad">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAnadir" layoutX="53.0" layoutY="532.0" mnemonicParsing="false" onAction="#anadir" prefHeight="36.0" prefWidth="89.0" text="Añadir" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="174.0" layoutY="532.0" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="89.0" text="Editar" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBorrar" layoutX="53.0" layoutY="605.0" mnemonicParsing="false" onAction="#borrar" prefHeight="36.0" prefWidth="89.0" text="Borrar" textFill="#d33838">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="174.0" layoutY="605.0" mnemonicParsing="false" onAction="#volver" prefHeight="36.0" prefWidth="89.0" text="Volver" textFill="#f59622">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tablaPedidosSalas" layoutX="310.0" layoutY="197.0" onMouseClicked="#seleccionarTablaSalas" prefHeight="444.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="colNsala" prefWidth="110.0" text="Nº Sala" />
+          <TableColumn fx:id="colPlanta" prefWidth="110.0" text="Planta" />
+            <TableColumn fx:id="colPuerta" prefWidth="110.0" text="Puerta" />
+            <TableColumn fx:id="colNAsistentes" prefWidth="110.0" text="Nº Asistentes" />
+            <TableColumn fx:id="colCiudad" prefWidth="110.0" text="Ciudad" />
+        </columns>
+      </TableView>
+      <Spinner fx:id="spNAsistentes" layoutX="128.0" layoutY="377.0" prefHeight="25.0" prefWidth="101.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f59622" height="36.0" layoutY="704.0" stroke="BLACK" strokeType="INSIDE" width="919.0" />
+      <Label alignment="CENTER" layoutX="453.0" layoutY="132.0" prefHeight="22.0" prefWidth="268.0" text="Listado de  Salas">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spSala" layoutX="124.0" layoutY="202.0" prefHeight="25.0" prefWidth="101.0" />
+   </children>
+</AnchorPane>

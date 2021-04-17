@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 9 abr. 2021 8:53:39 by Hibernate Tools 5.4.27.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="crmbd" dynamic-insert="false" dynamic-update="false" mutable="true" name="modelo.Orden" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="orden">
+        <id name="idorden" type="int">
+            <column name="idorden"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="modelo.Clientes" embed-xml="true" fetch="select" insert="true" name="clientes" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="idcliente" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="modelo.Salas" embed-xml="true" fetch="select" insert="true" name="salas" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="idsala" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="precio" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="precio" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
