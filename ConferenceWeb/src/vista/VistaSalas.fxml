@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="idFondoSalas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="960.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.SalasController">
+   <children>
+      <Label id="idTitulo" fx:id="lbIni" alignment="CENTER" layoutX="291.0" prefHeight="60.0" prefWidth="348.0" stylesheets="@../css/application.css" text="Registro de Salas">
+         <font>
+            <Font name="Calibri Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbCentro" layoutX="83.0" layoutY="237.0" text="Centro ">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfCentro" layoutX="169.0" layoutY="230.0" onKeyTyped="#keCentro" prefHeight="32.0" prefWidth="132.0" />
+      <Label fx:id="lbSala" layoutX="83.0" layoutY="300.0" text="Nª Sala">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNSala" layoutX="169.0" layoutY="293.0" onKeyTyped="#keyNsala" prefHeight="32.0" prefWidth="132.0" />
+      <Label fx:id="lbAsistentes" layoutX="62.0" layoutY="361.0" text="Nº Asistentes">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAnadir" layoutX="62.0" layoutY="448.0" mnemonicParsing="false" onAction="#anadir" prefHeight="50.0" prefWidth="90.0" text="Añadir" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="206.0" layoutY="448.0" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="90.0" text="Editar" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBorrar" layoutX="62.0" layoutY="547.0" mnemonicParsing="false" onAction="#borrar" prefHeight="50.0" prefWidth="90.0" text="Borrar" textFill="#d33838">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="206.0" layoutY="547.0" mnemonicParsing="false" onAction="#volver" prefHeight="50.0" prefWidth="90.0" text="Volver" textFill="#f59622">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView id="my-table" fx:id="tbSalas" layoutX="345.0" layoutY="155.0" onMouseClicked="#selectTablaSalas" prefHeight="479.0" prefWidth="565.0" stylesheets="@../css/application.css">
+        <columns>
+          <TableColumn fx:id="colDirec" prefWidth="160.0" text="Dirección" />
+            <TableColumn fx:id="colCentro" prefWidth="160.0" text="Centro" />
+            <TableColumn fx:id="colNSala" prefWidth="120.0" text="Nº Sala" />
+            <TableColumn fx:id="colAsistentes" prefWidth="120.0" text="Nº Asistentes" />
+        </columns>
+      </TableView>
+      <Label fx:id="lbListSalas" alignment="CENTER" layoutX="493.0" layoutY="102.0" prefHeight="22.0" prefWidth="268.0" text="Listado de  Salas">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfAsistentes" layoutX="169.0" layoutY="354.0" onKeyTyped="#keyNasistentes" prefHeight="32.0" prefWidth="132.0" />
+      <Label fx:id="lbInfo" alignment="CENTER" layoutX="35.0" layoutY="100.0" prefHeight="25.0" prefWidth="342.0" text="Proceda con la Sala" textFill="#8d0404">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tftDirec" layoutX="170.0" layoutY="173.0" onKeyTyped="#KeyDireccion" prefHeight="32.0" prefWidth="132.0" />
+      <Label fx:id="lbDirec" layoutX="76.0" layoutY="180.0" text="Dirección">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

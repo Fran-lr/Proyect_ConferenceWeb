@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="IdFondoMenu" accessibleRole="BUTTON" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="899.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PanelPrincipalController">
+   <children>
+      <Label id="labelPrincipal" fx:id="lbIni" alignment="CENTER" layoutX="252.0" prefHeight="60.0" prefWidth="395.0" stylesheets="@../css/application.css" text="Menú Principal">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="420.0" layoutY="139.0" text="Clientes" textFill="#171716">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="178.0" layoutY="139.0" text="Salas" textFill="#171716">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="613.0" layoutY="139.0" prefHeight="28.0" prefWidth="179.0" text="Gestión Usuarios" textFill="#171716">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="280.0" layoutY="377.0" text="Ciudades" textFill="#171716">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="543.0" layoutY="377.0" text="Ordenes" textFill="#171716">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Label>
+      <Button fx:id="btnSalas" layoutX="158.0" layoutY="195.0" mnemonicParsing="false" onAction="#Salas" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnCiudades" layoutX="281.0" layoutY="429.0" mnemonicParsing="false" onAction="#ciudades" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnClientes" layoutX="415.0" layoutY="195.0" mnemonicParsing="false" onAction="#clientes" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnOrden" layoutX="540.0" layoutY="429.0" mnemonicParsing="false" onAction="#orden" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnUsuarios" layoutX="657.0" layoutY="195.0" mnemonicParsing="false" onAction="#usuarios" prefHeight="90.0" prefWidth="90.0" />
+      <Button fx:id="btnCerrar" layoutX="694.0" layoutY="577.0" mnemonicParsing="false" onAction="#cerrar" prefHeight="49.0" prefWidth="131.0" text="Cerrar Sesión" textFill="#c92424">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

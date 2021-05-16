@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 4 may. 2021 11:26:48 by Hibernate Tools 5.3.20.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="crmbd" dynamic-insert="false" dynamic-update="false" mutable="true" name="modelo.Salas" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="salas">
+        <id name="idsala" type="java.lang.Integer">
+            <column name="idsala"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="direccion" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="direccion" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="centro" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="centro" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="nsala" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="nsala" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="nasistentes" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="nasistentes" not-null="true"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="ordens" optimistic-lock="true" sort="unsorted" table="orden">
+            <key on-delete="noaction">
+                <column name="idsala" not-null="true"/>
+            </key>
+            <one-to-many class="modelo.Orden" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="idFonfoCiudades" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CiudadesController">
+   <children>
+      <Label id="idTitulo" fx:id="lbIni" alignment="CENTER" layoutX="253.0" prefHeight="60.0" prefWidth="379.0" stylesheets="@../css/application.css" text="Registro de Ciudades">
+         <font>
+            <Font name="Calibri Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbCodP" layoutX="121.0" layoutY="286.0" text="CP Ciudad">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbNomCiud" layoutX="102.0" layoutY="214.0" text="Nombre Ciudad">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNomCiud" layoutX="231.0" layoutY="206.0" onKeyTyped="#keyCiudad" prefHeight="33.0" prefWidth="132.0" />
+      <Button fx:id="btnAnadir" layoutX="106.0" layoutY="386.0" mnemonicParsing="false" onAction="#anadir" prefHeight="51.0" prefWidth="98.0" text="Añadir" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="256.0" layoutY="386.0" mnemonicParsing="false" onAction="#editar" prefHeight="51.0" prefWidth="98.0" text="Editar" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBorrar" layoutX="106.0" layoutY="495.0" mnemonicParsing="false" onAction="#borrar" prefHeight="51.0" prefWidth="98.0" text="Borrar" textFill="#d02828">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="256.0" layoutY="495.0" mnemonicParsing="false" onAction="#volver" prefHeight="51.0" prefWidth="98.0" text="Volver" textFill="#f59622">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <TableView id="my-table" fx:id="tbCiudades" layoutX="417.0" layoutY="174.0" onMouseClicked="#selecTablaCiud" prefHeight="439.0" prefWidth="404.0" stylesheets="@../css/application.css">
+        <columns>
+          <TableColumn fx:id="colNomCiu" minWidth="0.0" prefWidth="200.0" text="Nombre Ciudad" />
+          <TableColumn fx:id="colCpCiu" prefWidth="200.0" text="CP Ciudad" />
+        </columns>
+      </TableView>
+      <Label fx:id="lbLisCiudad" alignment="CENTER" layoutX="521.0" layoutY="112.0" prefHeight="25.0" prefWidth="197.0" text="Lista de Ciudades">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbInfo" alignment="CENTER" layoutX="53.0" layoutY="108.0" prefHeight="33.0" prefWidth="389.0" text="Proceda con la Ciudad" textAlignment="CENTER" textFill="#860404">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfCodP" layoutX="231.0" layoutY="278.0" onKeyTyped="#keyCP" prefHeight="33.0" prefWidth="132.0" />
+   </children>
+</AnchorPane>

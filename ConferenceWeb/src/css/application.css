@@ -1,0 +1,79 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#idTitulo{
+    -fx-background-color:#1a5276;
+    -fx-text-fill: white;
+    -fx-border-color:black;   
+}
+#labelPrincipal{
+	 -fx-background-color:#1a5276;
+    -fx-text-fill: white;
+    -fx-border-color:black;  
+}
+#IdFondoMenu{
+    -fx-background-color: #1a5276, white; /* 2nd inner color, 3rd inner color*/
+    -fx-background-insets: 0,55; /*2nd inner ring, 3rd inner ring */
+    -fx-background-radius: 0%;
+    -fx-border-width: 25;   /* outer ring width */
+    -fx-border-color: #f59622;/* outer ring color */
+    -fx-border-radius: 5%;
+}
+#idFondoLogin{
+	-fx-background-color: #1a5276, white; /* 2nd inner color, 3rd inner color*/
+    -fx-background-insets: 20,40; /*2nd inner ring, 3rd inner ring */
+    -fx-background-radius: 0%;
+    -fx-border-width: 20;   /* outer ring width */
+    -fx-border-color: #f59622;/* outer ring color */
+    -fx-border-radius: 0%;
+}
+#idFondoUsuarios{
+	-fx-background-color: #1a5276, white; /* 2nd inner color, 3rd inner color*/
+    -fx-background-insets: 25,50; /*2nd inner ring, 3rd inner ring */
+    -fx-background-radius: 0%;
+    -fx-border-width: 25;   /* outer ring width */
+    -fx-border-color: #f59622;/* outer ring color */
+    -fx-border-radius: 0%;
+	
+}
+#idFonfoCiudades{
+	-fx-background-color: #1a5276, white; /* 2nd inner color, 3rd inner color*/
+    -fx-background-insets: 0,50; /*2nd inner ring, 3rd inner ring */
+    -fx-background-radius: 0%;
+    -fx-border-width: 25;   /* outer ring width */
+    -fx-border-color: #f59622;/* outer ring color */
+    -fx-border-radius: 8%;
+}
+#idFondoCllientes{
+	-fx-background-color: #1a5276, white; /* 2nd inner color, 3rd inner color*/
+    -fx-background-insets: 34,50; /*2nd inner ring, 3rd inner ring */
+    -fx-background-radius: 0%;
+    -fx-border-width: 17;   /* outer ring width */
+    -fx-border-color: #f59622;/* outer ring color */
+    -fx-border-radius: 0%;
+}
+#idFondoSalas{
+	-fx-background-color: #1a5276, white; /* 2nd inner color, 3rd inner color*/
+    -fx-background-insets:17,32; /*2nd inner ring, 3rd inner ring */
+    -fx-background-radius: 2%;
+    -fx-border-width:12;   /* outer ring width */
+    -fx-border-color: #f59622;/* outer ring color */
+    -fx-border-radius: 0%;
+}
+#my-table .table-column {
+	-fx-alignment: CENTER;
+}
+#idFondoLoader{
+	-fx-background-color: #1a5276, white; /* 2nd inner color, 3rd inner color*/
+    -fx-background-insets:90,140; /*2nd inner ring, 3rd inner ring */
+    -fx-background-radius: 2%;
+    -fx-border-width:50;   /* outer ring width */
+    -fx-border-color: #f59622;/* outer ring color */
+    -fx-border-radius: 0%;
+}
+#idFondoOrden{
+	-fx-background-color: #1a5276, white; /* 2nd inner color, 3rd inner color*/
+    -fx-background-insets:12,40; /*2nd inner ring, 3rd inner ring */
+    -fx-background-radius: 2%;
+    -fx-border-width:18;   /* outer ring width */
+    -fx-border-color: #f59622;/* outer ring color */
+    -fx-border-radius: 0%;
+}

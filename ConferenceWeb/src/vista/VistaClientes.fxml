@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="idFondoCllientes" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ClientesController">
+   <children>
+      <Label id="idTitulo" fx:id="lbIni" alignment="CENTER" layoutX="247.0" prefHeight="60.0" prefWidth="406.0" stylesheets="@../css/application.css" text="Clientes Registrados">
+         <font>
+            <Font name="Calibri Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbNomCli" layoutX="91.0" layoutY="215.0" text="Nombre Cliente">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbNif" layoutX="120.0" layoutY="292.0" text="NIF">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNomCli" layoutX="220.0" layoutY="207.0" onKeyTyped="#keyNomCliente" prefHeight="34.0" prefWidth="135.0" />
+      <TextField fx:id="tfNif" layoutX="220.0" layoutY="284.0" onKeyTyped="#KeyNif" prefHeight="34.0" prefWidth="135.0" />
+      <Button fx:id="btnAnadir" layoutX="111.0" layoutY="394.0" mnemonicParsing="false" onAction="#anadir" prefHeight="51.0" prefWidth="97.0" text="Añadir" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="265.0" layoutY="394.0" mnemonicParsing="false" onAction="#editar" prefHeight="51.0" prefWidth="97.0" text="Editar" textFill="#1a5276">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBorrar" layoutX="111.0" layoutY="501.0" mnemonicParsing="false" onAction="#borrar" prefHeight="51.0" prefWidth="97.0" text="Borrar" textFill="#d02828">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" layoutX="265.0" layoutY="501.0" mnemonicParsing="false" onAction="#volver" prefHeight="51.0" prefWidth="97.0" text="Volver" textFill="#f59622">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <TableView id="my-table" fx:id="tbClientes" layoutX="415.0" layoutY="169.0" onMouseClicked="#selectTablaClien" prefHeight="449.0" prefWidth="406.0" stylesheets="@../css/application.css">
+        <columns>
+          <TableColumn fx:id="colNomCli" minWidth="0.0" prefWidth="200.0" text="Nombre Cliente" />
+            <TableColumn fx:id="colNif" prefWidth="200.0" text="NIF" />
+        </columns>
+      </TableView>
+      <Label fx:id="lbListClien" alignment="CENTER" layoutX="465.0" layoutY="109.0" prefHeight="25.0" prefWidth="307.0" text="Lista de Clientes">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbInfo" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="104.0" prefHeight="34.0" prefWidth="350.0" text="Proceda con el Cliente" textFill="#a10505">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
